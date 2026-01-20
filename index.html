@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Currency in Canada | Regulations & Opportunities</title>
     
-    <!-- Meta Pixel Code - 新增的Facebook像素追踪代码 -->
+    <!-- Meta Pixel Code - Facebook像素追踪代码 -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -90,8 +90,8 @@
                     <i class="fa fa-bars text-xl"></i>
                 </button>
                 
-                <!-- 行动按钮 -->
-                <a href="https://wa.me/14161234567" target="_blank" class="hidden md:block bg-whatsapp hover:bg-whatsapp/90 text-white font-medium px-6 py-2 rounded-lg transition-colors">
+                <!-- 行动按钮 - 添加ID用于事件追踪 -->
+                <a href="https://wa.me/14161234567" target="_blank" id="contactButtonNav" class="hidden md:block bg-whatsapp hover:bg-whatsapp/90 text-white font-medium px-6 py-2 rounded-lg transition-colors">
                     <i class="fa fa-whatsapp mr-2"></i> Contact on WhatsApp
                 </a>
             </div>
@@ -106,7 +106,8 @@
                     <a href="#market" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Market Data</a>
                     <a href="#opportunities" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Opportunities</a>
                     <a href="#contact" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Contact</a>
-                    <a href="https://wa.me/14161234567" target="_blank" class="bg-whatsapp text-white font-medium px-6 py-3 rounded-lg text-center">
+                    <!-- 移动端联系按钮 - 添加ID用于事件追踪 -->
+                    <a href="https://wa.me/14161234567" target="_blank" id="contactButtonMobile" class="bg-whatsapp text-white font-medium px-6 py-3 rounded-lg text-center">
                         <i class="fa fa-whatsapp mr-2"></i> Contact on WhatsApp
                     </a>
                 </nav>
@@ -124,9 +125,9 @@
                 <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8 leading-relaxed">
                     Navigating the regulated landscape of digital assets in Canada - from cryptocurrency investments to blockchain innovation and regulatory compliance.
                 </p>
-                <!-- WhatsApp按钮 -->
+                <!-- WhatsApp按钮 - 添加ID用于事件追踪 -->
                 <div class="flex justify-center">
-                    <a href="https://wa.me/14161234567" target="_blank" class="bg-whatsapp hover:bg-whatsapp/90 text-white font-semibold px-8 py-3 rounded-lg transition-colors flex items-center btn-whatsapp-effect">
+                    <a href="https://wa.me/14161234567" target="_blank" id="contactButtonHero" class="bg-whatsapp hover:bg-whatsapp/90 text-white font-semibold px-8 py-3 rounded-lg transition-colors flex items-center btn-whatsapp-effect">
                         <i class="fa fa-whatsapp mr-2"></i> Contact Me on WhatsApp if Interested
                     </a>
                 </div>
@@ -239,7 +240,8 @@
                         </div>
                     </div>
                     
-                    <a href="https://wa.me/14161234567" target="_blank" class="inline-flex items-center gap-2 mt-8 text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
+                    <!-- 监管部分联系链接 - 添加ID用于事件追踪 -->
+                    <a href="https://wa.me/14161234567" target="_blank" id="contactButtonReg" class="inline-flex items-center gap-2 mt-8 text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
                         Get Full Regulatory Details on WhatsApp
                         <i class="fa fa-whatsapp"></i>
                     </a>
@@ -368,7 +370,7 @@
                     <div class="p-6">
                         <h3 class="text-lg font-semibold text-dark mb-3">Trading & Investment</h3>
                         <p class="text-gray-600 mb-4">Access regulated crypto exchanges to trade Bitcoin, Ethereum and other digital assets with Canadian dollars.</p>
-                        <a href="https://wa.me/14161234567" target="_blank" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
+                        <a href="https://wa.me/14161234567" target="_blank" id="contactButtonTrade" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
                             Discuss Investment <i class="fa fa-whatsapp ml-1"></i>
                         </a>
                     </div>
@@ -379,7 +381,7 @@
                     <div class="p-6">
                         <h3 class="text-lg font-semibold text-dark mb-3">Startup Funding</h3>
                         <p class="text-gray-600 mb-4">Invest in Canadian blockchain startups through venture capital funds and equity crowdfunding platforms.</p>
-                        <a href="https://wa.me/14161234567" target="_blank" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
+                        <a href="https://wa.me/14161234567" target="_blank" id="contactButtonFund" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
                             Discuss Funding <i class="fa fa-whatsapp ml-1"></i>
                         </a>
                     </div>
@@ -390,7 +392,7 @@
                     <div class="p-6">
                         <h3 class="text-lg font-semibold text-dark mb-3">Mining Operations</h3>
                         <p class="text-gray-600 mb-4">Canada's low electricity costs make it an ideal location for sustainable cryptocurrency mining operations.</p>
-                        <a href="https://wa.me/14161234567" target="_blank" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
+                        <a href="https://wa.me/14161234567" target="_blank" id="contactButtonMine" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
                             Discuss Mining <i class="fa fa-whatsapp ml-1"></i>
                         </a>
                     </div>
@@ -401,7 +403,7 @@
                     <div class="p-6">
                         <h3 class="text-lg font-semibold text-dark mb-3">Web3 Development</h3>
                         <p class="text-gray-600 mb-4">Participate in Canada's growing Web3 ecosystem through development, NFT marketplaces, and decentralized finance.</p>
-                        <a href="https://wa.me/14161234567" target="_blank" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
+                        <a href="https://wa.me/14161234567" target="_blank" id="contactButtonDev" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
                             Discuss Development <i class="fa fa-whatsapp ml-1"></i>
                         </a>
                     </div>
@@ -421,8 +423,8 @@
                             Our team of Canadian crypto experts can help you navigate regulations, identify investment opportunities, and ensure compliance with all applicable laws.
                         </p>
                         
-                        <!-- 核心WhatsApp联系按钮 -->
-                        <a href="https://wa.me/14161234567" target="_blank" class="inline-flex items-center justify-center bg-whatsapp hover:bg-whatsapp/90 text-white font-semibold px-10 py-4 rounded-lg transition-colors shadow-lg btn-whatsapp-effect">
+                        <!-- 核心WhatsApp联系按钮 - 添加ID用于事件追踪 -->
+                        <a href="https://wa.me/14161234567" target="_blank" id="contactButtonMain" class="inline-flex items-center justify-center bg-whatsapp hover:bg-whatsapp/90 text-white font-semibold px-10 py-4 rounded-lg transition-colors shadow-lg btn-whatsapp-effect">
                             <i class="fa fa-whatsapp mr-3 text-xl"></i>
                             <span class="text-xl">Contact WhatsApp</span>
                         </a>
@@ -611,6 +613,96 @@
                     }
                 }
             });
+        });
+        
+        // Facebook Pixel 事件追踪 - 联系按钮点击事件
+        // 定义通用的事件追踪函数
+        function trackContactEvent(eventName, eventParams) {
+            // 触发Facebook Pixel事件
+            fbq('track', eventName, eventParams || {
+                content_name: 'Contact for Crypto Consultation',
+                content_category: 'Crypto Canada',
+                currency: 'CAD',
+                value: 0
+            });
+            
+            // 可选：控制台输出，方便调试
+            console.log(`Tracked ${eventName} event:`, eventParams);
+        }
+        
+        // 为所有联系按钮添加点击事件监听
+        document.addEventListener('DOMContentLoaded', function() {
+            // 导航栏联系按钮
+            const contactButtonNav = document.getElementById('contactButtonNav');
+            if (contactButtonNav) {
+                contactButtonNav.addEventListener('click', function() {
+                    trackContactEvent('Lead', { button_location: 'navigation' });
+                }, false);
+            }
+            
+            // 移动端联系按钮
+            const contactButtonMobile = document.getElementById('contactButtonMobile');
+            if (contactButtonMobile) {
+                contactButtonMobile.addEventListener('click', function() {
+                    trackContactEvent('Lead', { button_location: 'mobile_menu' });
+                }, false);
+            }
+            
+            // 英雄区联系按钮
+            const contactButtonHero = document.getElementById('contactButtonHero');
+            if (contactButtonHero) {
+                contactButtonHero.addEventListener('click', function() {
+                    trackContactEvent('Lead', { button_location: 'hero_section' });
+                }, false);
+            }
+            
+            // 监管区联系按钮
+            const contactButtonReg = document.getElementById('contactButtonReg');
+            if (contactButtonReg) {
+                contactButtonReg.addEventListener('click', function() {
+                    trackContactEvent('Lead', { button_location: 'regulations_section', interest: 'regulatory_details' });
+                }, false);
+            }
+            
+            // 交易投资联系按钮
+            const contactButtonTrade = document.getElementById('contactButtonTrade');
+            if (contactButtonTrade) {
+                contactButtonTrade.addEventListener('click', function() {
+                    trackContactEvent('Lead', { button_location: 'opportunities_section', interest: 'trading_investment' });
+                }, false);
+            }
+            
+            // 融资联系按钮
+            const contactButtonFund = document.getElementById('contactButtonFund');
+            if (contactButtonFund) {
+                contactButtonFund.addEventListener('click', function() {
+                    trackContactEvent('Lead', { button_location: 'opportunities_section', interest: 'startup_funding' });
+                }, false);
+            }
+            
+            // 挖矿联系按钮
+            const contactButtonMine = document.getElementById('contactButtonMine');
+            if (contactButtonMine) {
+                contactButtonMine.addEventListener('click', function() {
+                    trackContactEvent('Lead', { button_location: 'opportunities_section', interest: 'mining_operations' });
+                }, false);
+            }
+            
+            // 开发联系按钮
+            const contactButtonDev = document.getElementById('contactButtonDev');
+            if (contactButtonDev) {
+                contactButtonDev.addEventListener('click', function() {
+                    trackContactEvent('Lead', { button_location: 'opportunities_section', interest: 'web3_development' });
+                }, false);
+            }
+            
+            // 主联系按钮
+            const contactButtonMain = document.getElementById('contactButtonMain');
+            if (contactButtonMain) {
+                contactButtonMain.addEventListener('click', function() {
+                    trackContactEvent('Lead', { button_location: 'contact_section' });
+                }, false);
+            }
         });
     </script>
 </body>
