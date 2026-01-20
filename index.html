@@ -3,126 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Currency in Canada | Regulations & Opportunities</title>
-    
-    <!-- Meta Pixel Code - Facebook像素追踪代码 -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1456360599421934');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1456360599421934&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-    
-    <!-- IP地域限制 - 核心功能 -->
-    <script>
-        // 立即执行函数检测IP地域
-        (function() {
-            // 创建访问受限的样式
-            const restrictionStyle = document.createElement('style');
-            restrictionStyle.textContent = `
-                #accessRestricted {
-                    display: none;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: #ffffff;
-                    z-index: 9999;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                    padding: 2rem;
-                }
-                #mainContent {
-                    display: block;
-                }
-                .restricted-container {
-                    max-width: 600px;
-                    margin: 0 auto;
-                }
-                .restricted-icon {
-                    font-size: 4rem;
-                    color: #e63946;
-                    margin-bottom: 1rem;
-                }
-                .restricted-title {
-                    font-size: 2rem;
-                    font-weight: bold;
-                    color: #1d3557;
-                    margin-bottom: 1rem;
-                }
-                .restricted-message {
-                    font-size: 1.1rem;
-                    color: #6c757d;
-                    line-height: 1.6;
-                    margin-bottom: 2rem;
-                }
-                .restricted-contact {
-                    font-size: 1rem;
-                    color: #0063a5;
-                    font-weight: 500;
-                }
-            `;
-            document.head.appendChild(restrictionStyle);
-
-            // 定义检测IP的函数
-            async function checkIPLocation() {
-                try {
-                    // 调用IP地理定位API
-                    const response = await fetch('https://ipapi.co/json/');
-                    const data = await response.json();
-                    
-                    // 检查国家代码是否为加拿大(CA)
-                    if (data.country_code !== 'CA') {
-                        // 非加拿大IP，显示访问受限页面
-                        document.getElementById('accessRestricted').style.display = 'flex';
-                        document.getElementById('mainContent').style.display = 'none';
-                        
-                        // 记录受限访问事件到Facebook Pixel
-                        fbq('track', 'ViewContent', {
-                            content_name: 'Access Restricted - Non-Canadian IP',
-                            content_category: 'Geo-Restriction',
-                            country: data.country_name || 'Unknown'
-                        });
-                    }
-                } catch (error) {
-                    // API调用失败时不限制访问（避免误拦）
-                    console.log('IP location check failed:', error);
-                    // 可以选择在这里添加备用检测方案或直接放行
-                }
-            }
-
-            // 页面加载时立即检测IP
-            window.addEventListener('DOMContentLoaded', checkIPLocation);
-        })();
-    </script>
-    
+    <title>Cryptocurrency in Australia | Regulations & Opportunities</title>
+    <!-- Tailwind CSS CDN (无需本地安装，直接使用) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <!-- Font Awesome (图标库) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- 自定义Tailwind配置 -->
     <script>
-        // Tailwind 自定义配置
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#0063a5', // 加拿大蓝
-                        secondary: '#e63946', // 加拿大红
-                        neutral: '#f8f9fa',
-                        dark: '#1d3557',
-                        whatsapp: '#25D366' // WhatsApp绿色
+                        primary: '#0066CC', // 澳大利亚主题蓝
+                        secondary: '#FFCC00', // 澳大利亚主题黄
+                        dark: '#1A1A1A',
+                        light: '#F5F7FA'
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -131,517 +27,298 @@
             }
         }
     </script>
+    
+    <!-- 自定义样式 -->
     <style type="text/tailwindcss">
         @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
             .text-shadow {
                 text-shadow: 0 2px 4px rgba(0,0,0,0.1);
             }
-            .bg-gradient-canada {
-                background: linear-gradient(135deg, #0063a5 0%, #1d3557 100%);
-            }
-            .btn-whatsapp-effect {
-                @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+            .section-padding {
+                padding: clamp(3rem, 8vw, 6rem) 0;
             }
         }
     </style>
-    <!-- 引入Inter字体 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans text-gray-800 bg-white">
-    <!-- 访问受限页面 -->
-    <div id="accessRestricted">
-        <div class="restricted-container">
-            <div class="restricted-icon">
-                <i class="fa fa-ban"></i>
+<body class="font-sans text-dark bg-light antialiased">
+    <!-- 导航栏 -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center gap-2">
+                    <i class="fa-brands fa-bitcoin text-primary text-2xl"></i>
+                    <span class="font-bold text-xl">CryptoAU</span>
+                </a>
+                
+                <!-- 桌面端导航 -->
+                <nav class="hidden md:flex gap-8">
+                    <a href="#overview" class="text-dark/80 hover:text-primary transition">Overview</a>
+                    <a href="#regulation" class="text-dark/80 hover:text-primary transition">Regulation</a>
+                    <a href="#adoption" class="text-dark/80 hover:text-primary transition">Adoption</a>
+                    <a href="#contact" class="text-dark/80 hover:text-primary transition">Contact</a>
+                </nav>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menuBtn" class="md:hidden text-dark text-xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
-            <h1 class="restricted-title">Access Restricted</h1>
-            <p class="restricted-message">
-                This website is only accessible to visitors from Canada. 
-                We specialize in Canadian virtual currency regulations and opportunities, 
-                and our services are tailored specifically for Canadian residents and businesses.
-            </p>
-            <p class="restricted-contact">
-                For international inquiries, please contact us via WhatsApp: +1 (416) 123-4567
-            </p>
         </div>
-    </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white shadow-md">
+            <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+                <a href="#overview" class="text-dark/80 hover:text-primary transition py-2">Overview</a>
+                <a href="#regulation" class="text-dark/80 hover:text-primary transition py-2">Regulation</a>
+                <a href="#adoption" class="text-dark/80 hover:text-primary transition py-2">Adoption</a>
+                <a href="#contact" class="text-dark/80 hover:text-primary transition py-2">Contact</a>
+            </div>
+        </div>
+    </header>
 
-    <!-- 主内容区域 -->
-    <div id="mainContent">
-        <!-- 导航栏 -->
-        <header class="fixed w-full top-0 z-50 bg-white/95 shadow-sm transition-all duration-300" id="navbar">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center py-4">
-                    <a href="#" class="flex items-center space-x-2">
-                        <i class="fa fa-canadian-maple-leaf text-primary text-2xl"></i>
-                        <span class="text-xl font-bold text-dark">CryptoCanada</span>
-                    </a>
-                    
-                    <!-- 桌面导航 -->
-                    <nav class="hidden md:flex space-x-8">
-                        <a href="#overview" class="text-gray-700 hover:text-primary font-medium transition-colors">Overview</a>
-                        <a href="#regulations" class="text-gray-700 hover:text-primary font-medium transition-colors">Regulations</a>
-                        <a href="#market" class="text-gray-700 hover:text-primary font-medium transition-colors">Market Data</a>
-                        <a href="#opportunities" class="text-gray-700 hover:text-primary font-medium transition-colors">Opportunities</a>
-                        <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
-                    </nav>
-                    
-                    <!-- 移动端菜单按钮 -->
-                    <button class="md:hidden text-gray-700 hover:text-primary" id="menuBtn">
-                        <i class="fa fa-bars text-xl"></i>
-                    </button>
-                    
-                    <!-- 行动按钮 - 添加ID用于事件追踪，添加预设消息 -->
-                    <a href="https://wa.me/14161234567?text=Hello,%20I%20would%20like%20to%20learn%20about%20virtual%20currency%20in%20Argentina,%20could%20you%20help%20me%3F" target="_blank" id="contactButtonNav" class="hidden md:block bg-whatsapp hover:bg-whatsapp/90 text-white font-medium px-6 py-2 rounded-lg transition-colors">
-                        <i class="fa fa-whatsapp mr-2"></i> Contact on WhatsApp
+    <!-- 英雄区 - 修改了按钮部分 -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-shadow mb-6">
+                    Cryptocurrency in <span class="text-primary">Australia</span>
+                </h1>
+                <p class="text-lg text-dark/70 mb-8">
+                    Navigating the regulatory landscape, adoption trends, and investment opportunities 
+                    of digital assets in the Australian market.
+                </p>
+                <!-- 替换为单个WhatsApp联系按钮 -->
+                <div class="flex justify-center">
+                    <a href="https://wa.me/你的电话号码" target="_blank" class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Contact me on WhatsApp for inquiries
                     </a>
                 </div>
             </div>
-            
-            <!-- 移动端导航菜单 -->
-            <div class="md:hidden hidden bg-white shadow-lg absolute w-full left-0 top-full" id="mobileMenu">
-                <div class="container mx-auto px-4 py-3">
-                    <nav class="flex flex-col space-y-4 py-3">
-                        <a href="#overview" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Overview</a>
-                        <a href="#regulations" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Regulations</a>
-                        <a href="#market" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Market Data</a>
-                        <a href="#opportunities" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Opportunities</a>
-                        <a href="#contact" class="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Contact</a>
-                        <!-- 移动端联系按钮 - 添加ID用于事件追踪，添加预设消息 -->
-                        <a href="https://wa.me/14161234567?text=Hello,%20I%20would%20like%20to%20learn%20about%20virtual%20currency%20in%20Argentina,%20could%20you%20help%20me%3F" target="_blank" id="contactButtonMobile" class="bg-whatsapp text-white font-medium px-6 py-3 rounded-lg text-center">
-                            <i class="fa fa-whatsapp mr-2"></i> Contact on WhatsApp
-                        </a>
-                    </nav>
-                </div>
-            </div>
-        </header>
+        </div>
+    </section>
 
-        <!-- 英雄区域 -->
-        <section class="pt-32 pb-20 bg-gradient-canada text-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-shadow mb-6">
-                        Virtual Currency in Canada
-                    </h1>
-                    <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8 leading-relaxed">
-                        Navigating the regulated landscape of digital assets in Canada - from cryptocurrency investments to blockchain innovation and regulatory compliance.
-                    </p>
-                    <!-- WhatsApp按钮 - 添加ID用于事件追踪，添加预设消息 -->
-                    <div class="flex justify-center">
-                        <a href="https://wa.me/14161234567?text=Hello,%20I%20would%20like%20to%20learn%20about%20virtual%20currency%20in%20Argentina,%20could%20you%20help%20me%3F" target="_blank" id="contactButtonHero" class="bg-whatsapp hover:bg-whatsapp/90 text-white font-semibold px-8 py-3 rounded-lg transition-colors flex items-center btn-whatsapp-effect">
-                            <i class="fa fa-whatsapp mr-2"></i> Contact Me on WhatsApp if Interested
-                        </a>
+    <!-- 概述部分 -->
+    <section id="overview" class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto mb-12 text-center">
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-4">Australian Crypto Landscape</h2>
+                <p class="text-dark/70">
+                    Australia has emerged as one of the most progressive markets for cryptocurrency 
+                    adoption and regulation in the Asia-Pacific region.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 卡片1 -->
+                <div class="bg-light rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-chart-line text-primary text-xl"></i>
                     </div>
-                </div>
-            </div>
-            
-            <!-- 波浪装饰 -->
-            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-[50px] md:h-[80px] text-white">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31,30,31,30z" fill="currentColor"></path>
-                </svg>
-            </div>
-        </section>
-
-        <!-- 概述部分 -->
-        <section id="overview" class="py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">Canada's Virtual Currency Landscape</h2>
-                    <p class="text-gray-600 text-lg leading-relaxed">
-                        Canada has emerged as a progressive yet well-regulated market for virtual currencies, balancing innovation with consumer protection.
+                    <h3 class="text-xl font-semibold mb-3">Market Growth</h3>
+                    <p class="text-dark/70">
+                        Over 20% of Australian adults own cryptocurrency, with a market cap exceeding 
+                        AUD $50 billion as of 2025. Bitcoin and Ethereum remain the most popular assets.
                     </p>
                 </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-neutral rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                            <i class="fa fa-legal text-primary text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-dark mb-4">Clear Regulatory Framework</h3>
-                        <p class="text-gray-600">
-                            Canadian regulators including FINTRAC and OSFI have established clear guidelines for cryptocurrency exchanges, ATMs, and digital asset businesses operating in the country.
-                        </p>
-                    </div>
-                    
-                    <div class="bg-neutral rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                            <i class="fa fa-line-chart text-primary text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-dark mb-4">Growing Market Adoption</h3>
-                        <p class="text-gray-600">
-                            Over 10% of Canadian adults own cryptocurrency, with major financial institutions offering crypto-related services and publicly traded companies investing in digital assets.
-                        </p>
-                    </div>
-                    
-                    <div class="bg-neutral rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                            <i class="fa fa-lightbulb-o text-primary text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-dark mb-4">Innovation & Technology</h3>
-                        <p class="text-gray-600">
-                            Canada is home to a thriving blockchain ecosystem with startups, research institutions, and government initiatives driving innovation in DeFi, NFTs, and Web3 technologies.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- 监管部分 -->
-        <section id="regulations" class="py-20 bg-neutral">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">Canadian Virtual Currency Regulations</h2>
-                    <p class="text-gray-600 text-lg leading-relaxed">
-                        Canada maintains a comprehensive regulatory approach to virtual currencies, focusing on anti-money laundering, consumer protection, and market integrity.
+                <!-- 卡片2 -->
+                <div class="bg-light rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-store text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Merchant Adoption</h3>
+                    <p class="text-dark/70">
+                        Major retailers, travel agencies, and service providers across Australia now accept 
+                        crypto payments, including Bitcoin, Ethereum, and stablecoins like USDC.
                     </p>
                 </div>
-                
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="space-y-6">
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                                    <i class="fa fa-shield text-primary"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold text-dark">FINTRAC Registration</h3>
-                                    <p class="text-gray-600">All cryptocurrency exchanges and money service businesses must register with FINTRAC and comply with AML/CTF regulations.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                                    <i class="fa fa-university text-primary"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold text-dark">OSFI Oversight</h3>
-                                    <p class="text-gray-600">Banks and financial institutions dealing with crypto assets are regulated by the Office of the Superintendent of Financial Institutions.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                                    <i class="fa fa-balance-scale text-primary"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold text-dark">Securities Regulation</h3>
-                                    <p class="text-gray-600">Certain crypto assets are classified as securities and regulated by provincial securities commissions like the OSC in Ontario.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                                    <i class="fa fa-money text-primary"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold text-dark">Taxation Rules</h3>
-                                    <p class="text-gray-600">The CRA treats cryptocurrency as a commodity for tax purposes, requiring reporting of gains and losses from crypto transactions.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 监管部分联系链接 - 添加ID用于事件追踪，添加预设消息 -->
-                        <a href="https://wa.me/14161234567?text=Hello,%20I%20would%20like%20to%20learn%20about%20virtual%20currency%20in%20Argentina,%20could%20you%20help%20me%3F" target="_blank" id="contactButtonReg" class="inline-flex items-center gap-2 mt-8 text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
-                            Get Full Regulatory Details on WhatsApp
-                            <i class="fa fa-whatsapp"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <img src="https://picsum.photos/id/180/800/600" alt="Canadian financial regulatory building" class="w-full h-64 object-cover">
-                        <div class="p-6">
-                            <h4 class="font-semibold text-lg text-dark mb-3">Key Regulatory Bodies</h4>
-                            <ul class="space-y-3 text-gray-600">
-                                <li class="flex items-center gap-2">
-                                    <i class="fa fa-check text-primary"></i>
-                                    <span>Financial Transactions and Reports Analysis Centre of Canada (FINTRAC)</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fa fa-check text-primary"></i>
-                                    <span>Office of the Superintendent of Financial Institutions (OSFI)</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fa fa-check text-primary"></i>
-                                    <span>Canadian Securities Administrators (CSA)</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fa fa-check text-primary"></i>
-                                    <span>Canada Revenue Agency (CRA)</span>
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <i class="fa fa-check text-primary"></i>
-                                    <span>Competition Bureau</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- 市场数据部分 -->
-        <section id="market" class="py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">Canadian Crypto Market Data</h2>
-                    <p class="text-gray-600 text-lg leading-relaxed">
-                        Track the latest trends and statistics for virtual currency adoption and trading activity in Canada.
+                <!-- 卡片3 -->
+                <div class="bg-light rounded-xl p-6 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-arrow-trend-up text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Institutional Interest</h3>
+                    <p class="text-dark/70">
+                        Australian banks, superannuation funds, and investment firms are increasingly 
+                        offering crypto-related products and services to their clients.
                     </p>
                 </div>
-                
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- 图表容器 -->
-                    <div class="bg-neutral rounded-xl p-6 shadow-sm">
-                        <h3 class="text-lg font-semibold text-dark mb-4">Crypto Adoption Rate in Canada (2020-2025)</h3>
-                        <div class="h-80">
-                            <canvas id="adoptionChart"></canvas>
-                        </div>
-                    </div>
-                    
-                    <!-- 市场统计 -->
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="bg-neutral rounded-xl p-6 shadow-sm">
-                            <div class="text-3xl font-bold text-primary mb-2">$5.2B</div>
-                            <p class="text-gray-600">Daily Crypto Trading Volume in Canada</p>
-                        </div>
-                        
-                        <div class="bg-neutral rounded-xl p-6 shadow-sm">
-                            <div class="text-3xl font-bold text-primary mb-2">12.7%</div>
-                            <p class="text-gray-600">Canadian Adults Holding Cryptocurrency</p>
-                        </div>
-                        
-                        <div class="bg-neutral rounded-xl p-6 shadow-sm">
-                            <div class="text-3xl font-bold text-primary mb-2">+42%</div>
-                            <p class="text-gray-600">Year-over-Year Growth in Crypto Investments</p>
-                        </div>
-                        
-                        <div class="bg-neutral rounded-xl p-6 shadow-sm">
-                            <div class="text-3xl font-bold text-primary mb-2">150+</div>
-                            <p class="text-gray-600">Registered Crypto Exchanges in Canada</p>
-                        </div>
-                        
-                        <div class="col-span-2 bg-neutral rounded-xl p-6 shadow-sm">
-                            <h4 class="font-semibold text-dark mb-3">Top Cryptocurrencies Traded in Canada</h4>
-                            <div class="space-y-3">
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">Bitcoin (BTC)</span>
-                                    <div class="w-3/4 bg-gray-200 rounded-full h-2">
-                                        <div class="bg-primary h-2 rounded-full" style="width: 65%"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">Ethereum (ETH)</span>
-                                    <div class="w-3/4 bg-gray-200 rounded-full h-2">
-                                        <div class="bg-primary h-2 rounded-full" style="width: 22%"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">Solana (SOL)</span>
-                                    <div class="w-3/4 bg-gray-200 rounded-full h-2">
-                                        <div class="bg-primary h-2 rounded-full" style="width: 5%"></div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-medium">Other Altcoins</span>
-                                    <div class="w-3/4 bg-gray-200 rounded-full h-2">
-                                        <div class="bg-primary h-2 rounded-full" style="width: 8%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 监管部分 -->
+    <section id="regulation" class="section-padding bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto mb-12 text-center">
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-4">Regulatory Framework</h2>
+                <p class="text-dark/70">
+                    Australia has established a clear and comprehensive regulatory regime for digital assets.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-primary"></i>
+                        Regulatory Bodies
+                    </h3>
+                    <ul class="space-y-2 text-dark/70">
+                        <li><strong>ASIC (ASIC):</strong> Regulates crypto exchanges and financial services</li>
+                        <li><strong>ATO (ATO):</strong> Oversees tax treatment of crypto transactions</li>
+                        <li><strong>AUSTRAC:</strong> Enforces anti-money laundering (AML) compliance</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-file-contract text-primary"></i>
+                        Key Regulations
+                    </h3>
+                    <ul class="space-y-2 text-dark/70">
+                        <li>Mandatory licensing for crypto exchanges (since 2021)</li>
+                        <li>Crypto treated as property for tax purposes</li>
+                        <li>AML/CTF obligations for all crypto service providers</li>
+                        <li>Clear guidelines for stablecoin issuances (2024 update)</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 机会部分 -->
-        <section id="opportunities" class="py-20 bg-neutral">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl mx-auto text-center mb-16">
-                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">Investment Opportunities in Canadian Crypto</h2>
-                    <p class="text-gray-600 text-lg leading-relaxed">
-                        Discover the diverse range of investment and business opportunities in Canada's regulated virtual currency market.
+    <!-- 应用场景部分 -->
+    <section id="adoption" class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto mb-12 text-center">
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-4">Real-World Adoption</h2>
+                <p class="text-dark/70">
+                    Cryptocurrency is no longer just an investment – it's a practical payment method across Australia.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-car text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Automotive</h4>
+                    <p class="text-sm text-dark/70">Car dealers accepting crypto for new & used vehicles</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-utensils text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Hospitality</h4>
+                    <p class="text-sm text-dark/70">Hotels, restaurants & cafes across major cities</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-plane text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Travel</h4>
+                    <p class="text-sm text-dark/70">Flight bookings & travel packages</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-home text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="font-semibold mb-2">Real Estate</h4>
+                    <p class="text-sm text-dark/70">Property purchases & rental payments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 简化的联系区域 - 仅保留WhatsApp按钮 -->
+    <section id="contact" class="section-padding bg-primary/5">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-md p-8 text-center">
+                <!-- 简化后的标题 -->
+                <h2 class="text-2xl font-bold mb-8 text-center">Interested? Contact me on WhatsApp</h2>
+                
+                <!-- 仅保留WhatsApp按钮，放大样式提升视觉焦点 -->
+                <a href="https://wa.me/你的电话号码" target="_blank" class="inline-block bg-primary text-white px-10 py-4 rounded-lg font-medium hover:bg-primary/90 transition text-lg flex items-center justify-center gap-2 mx-auto">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    Contact me via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-brands fa-bitcoin text-secondary text-2xl"></i>
+                        <span class="font-bold text-xl">CryptoAU</span>
+                    </div>
+                    <p class="text-white/70 mb-4">
+                        Your trusted source for cryptocurrency information and guidance in Australia.
                     </p>
-                </div>
-                
-                <div class="grid md:grid-cols-4 gap-6">
-                    <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                        <img src="https://picsum.photos/id/104/400/300" alt="Crypto trading" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold text-dark mb-3">Trading & Investment</h3>
-                            <p class="text-gray-600 mb-4">Access regulated crypto exchanges to trade Bitcoin, Ethereum and other digital assets with Canadian dollars.</p>
-                            <!-- 添加预设消息 -->
-                            <a href="https://wa.me/14161234567?text=Hello,%20I%20would%20like%20to%20learn%20about%20virtual%20currency%20in%20Argentina,%20could%20you%20help%20me%3F" target="_blank" id="contactButtonTrade" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
-                                Discuss Investment <i class="fa fa-whatsapp ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                        <img src="https://picsum.photos/id/180/400/300" alt="Blockchain startups" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold text-dark mb-3">Startup Funding</h3>
-                            <p class="text-gray-600 mb-4">Invest in Canadian blockchain startups through venture capital funds and equity crowdfunding platforms.</p>
-                            <!-- 添加预设消息 -->
-                            <a href="https://wa.me/14161234567?text=Hello,%20I%20would%20like%20to%20learn%20about%20virtual%20currency%20in%20Argentina,%20could%20you%20help%20me%3F" target="_blank" id="contactButtonFund" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
-                                Discuss Funding <i class="fa fa-whatsapp ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                        <img src="https://picsum.photos/id/160/400/300" alt="Crypto mining" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold text-dark mb-3">Mining Operations</h3>
-                            <p class="text-gray-600 mb-4">Canada's low electricity costs make it an ideal location for sustainable cryptocurrency mining operations.</p>
-                            <!-- 添加预设消息 -->
-                            <a href="https://wa.me/14161234567?text=Hello,%20I%20would%20like%20to%20learn%20about%20virtual%20currency%20in%20Argentina,%20could%20you%20help%20me%3F" target="_blank" id="contactButtonMine" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
-                                Discuss Mining <i class="fa fa-whatsapp ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                        <img src="https://picsum.photos/id/201/400/300" alt="Web3 development" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold text-dark mb-3">Web3 Development</h3>
-                            <p class="text-gray-600 mb-4">Participate in Canada's growing Web3 ecosystem through development, NFT marketplaces, and decentralized finance.</p>
-                            <!-- 添加预设消息 -->
-                            <a href="https://wa.me/14161234567?text=Hello,%20I%20would%20like%20to%20learn%20about%20virtual%20currency%20in%20Argentina,%20could%20you%20help%20me%3F" target="_blank" id="contactButtonDev" class="text-whatsapp font-medium hover:text-whatsapp/80 transition-colors">
-                                Discuss Development <i class="fa fa-whatsapp ml-1"></i>
-                            </a>
-                        </div>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-white/70 hover:text-secondary transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-white/70 hover:text-secondary transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="text-white/70 hover:text-secondary transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white/70 hover:text-secondary transition"><i class="fa-brands fa-instagram"></i></a>
+                        <!-- 添加WhatsApp社交媒体图标 -->
+                        <a href="https://wa.me/你的电话号码" target="_blank" class="text-white/70 hover:text-secondary transition"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- 联系部分 - 删除表单，只保留WhatsApp按钮 -->
-        <section id="contact" class="py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-6xl mx-auto">
-                    <div class="flex flex-col items-center justify-center text-center">
-                        <div class="max-w-3xl mx-auto">
-                            <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">Get Expert Guidance on Canadian Virtual Currency</h2>
-                            <p class="text-gray-600 text-lg leading-relaxed mb-12">
-                                Our team of Canadian crypto experts can help you navigate regulations, identify investment opportunities, and ensure compliance with all applicable laws.
-                            </p>
-                            
-                            <!-- 核心WhatsApp联系按钮 - 添加ID用于事件追踪，添加预设消息 -->
-                            <a href="https://wa.me/14161234567?text=Hello,%20I%20would%20like%20to%20learn%20about%20virtual%20currency%20in%20Argentina,%20could%20you%20help%20me%3F" target="_blank" id="contactButtonMain" class="inline-flex items-center justify-center bg-whatsapp hover:bg-whatsapp/90 text-white font-semibold px-10 py-4 rounded-lg transition-colors shadow-lg btn-whatsapp-effect">
-                                <i class="fa fa-whatsapp mr-3 text-xl"></i>
-                                <span class="text-xl">Contact WhatsApp</span>
-                            </a>
-                            
-                            <!-- 备用联系方式 -->
-                            <div class="mt-8 text-center text-gray-500">
-                                <p>Or call directly: <a href="tel:+14161234567" class="text-whatsapp hover:underline">+1 (416) 123-4567</a></p>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#overview" class="text-white/70 hover:text-secondary transition">Overview</a></li>
+                        <li><a href="#regulation" class="text-white/70 hover:text-secondary transition">Regulation</a></li>
+                        <li><a href="#adoption" class="text-white/70 hover:text-secondary transition">Adoption</a></li>
+                        <li><a href="#contact" class="text-white/70 hover:text-secondary transition">Contact</a></li>
+                    </ul>
                 </div>
-            </div>
-        </section>
 
-        <!-- 页脚 -->
-        <footer class="bg-dark text-white py-12">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div>
-                        <div class="flex items-center space-x-2 mb-6">
-                            <i class="fa fa-canadian-maple-leaf text-primary text-2xl"></i>
-                            <span class="text-xl font-bold">CryptoCanada</span>
-                        </div>
-                        <p class="text-gray-400 mb-6">
-                            Your trusted guide to virtual currency in Canada - providing regulatory insights, market analysis, and investment guidance.
-                        </p>
-                        <div class="flex space-x-4">
-                            <!-- 添加预设消息 -->
-                            <a href="https://wa.me/14161234567?text=Hello,%20I%20would%20like%20to%20learn%20about%20virtual%20currency%20in%20Argentina,%20could%20you%20help%20me%3F" target="_blank" class="text-gray-400 hover:text-whatsapp transition-colors">
-                                <i class="fa fa-whatsapp"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
-                        <ul class="space-y-3">
-                            <li><a href="#overview" class="text-gray-400 hover:text-white transition-colors">Overview</a></li>
-                            <li><a href="#regulations" class="text-gray-400 hover:text-white transition-colors">Regulations</a></li>
-                            <li><a href="#market" class="text-gray-400 hover:text-white transition-colors">Market Data</a></li>
-                            <li><a href="#opportunities" class="text-gray-400 hover:text-white transition-colors">Opportunities</a></li>
-                            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-semibold mb-6">Resources</h3>
-                        <ul class="space-y-3">
-                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Regulatory Guide</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Tax Information</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Market Reports</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-semibold mb-6">Contact</h3>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-2">
-                                <i class="fa fa-whatsapp text-whatsapp"></i>
-                                <!-- 添加预设消息 -->
-                                <a href="https://wa.me/14161234567?text=Hello,%20I%20would%20like%20to%20learn%20about%20virtual%20currency%20in%20Argentina,%20could%20you%20help%20me%3F" target="_blank" class="text-gray-400 hover:text-whatsapp transition-colors">+1 (416) 123-4567</a>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fa fa-envelope text-gray-400"></i>
-                                <a href="mailto:info@cryptocanada.com" class="text-gray-400 hover:text-white transition-colors">info@cryptocanada.com</a>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fa fa-map-marker text-gray-400"></i>
-                                <span class="text-gray-400">Toronto, Canada</span>
-                            </li>
-                        </ul>
-                    </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/70 hover:text-secondary transition">ATO Crypto Tax Guide</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-secondary transition">ASIC Regulatory Updates</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-secondary transition">Crypto Exchange Directory</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-secondary transition">Market Reports</a></li>
+                    </ul>
                 </div>
-                
-                <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 mb-4 md:mb-0">© 2025 CryptoCanada. All rights reserved.</p>
-                    <p class="text-gray-400">Cryptocurrency involves risk. Always do your own research.</p>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-white/70">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <span>Sydney, NSW 2000, Australia</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/70">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@cryptoau.com.au</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/70">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>+61 (02) 1234 5678</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-    </div>
+
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-white/50 text-sm">
+                <p>&copy; 2025 CryptoAU. All rights reserved. Cryptocurrency investment involves risk.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- JavaScript -->
     <script>
-        // 导航栏滚动效果
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('py-2', 'shadow');
-                navbar.classList.remove('py-4');
-            } else {
-                navbar.classList.add('py-4');
-                navbar.classList.remove('py-2', 'shadow');
-            }
-        });
-        
         // 移动端菜单切换
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
@@ -651,14 +328,12 @@
             // 切换图标
             const icon = menuBtn.querySelector('i');
             if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
+                icon.classList.replace('fa-bars', 'fa-times');
             } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                icon.classList.replace('fa-times', 'fa-bars');
             }
         });
-        
+
         // 平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -667,154 +342,24 @@
                 // 关闭移动端菜单
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
-                    const icon = menuBtn.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
+                    menuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
                 }
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-        
-        // 初始化图表
-        window.addEventListener('load', () => {
-            const ctx = document.getElementById('adoptionChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['2020', '2021', '2022', '2023', '2024', '2025 (Forecast)'],
-                    datasets: [{
-                        label: 'Percentage of Canadian Adults',
-                        data: [4.2, 8.7, 11.3, 12.7, 14.5, 16.8],
-                        borderColor: '#0063a5',
-                        backgroundColor: 'rgba(0, 99, 165, 0.1)',
-                        fill: true,
-                        tension: 0.4,
-                        pointBackgroundColor: '#0063a5',
-                        pointRadius: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                        tooltip: {
-                            mode: 'index',
-                            intersect: false,
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                callback: function(value) {
-                                    return value + '%';
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-        });
-        
-        // Facebook Pixel 事件追踪 - 联系按钮点击事件
-        // 定义通用的事件追踪函数
-        function trackContactEvent(eventName, eventParams) {
-            // 触发Facebook Pixel事件
-            fbq('track', eventName, eventParams || {
-                content_name: 'Contact for Crypto Consultation',
-                content_category: 'Crypto Canada',
-                currency: 'CAD',
-                value: 0
-            });
-            
-            // 可选：控制台输出，方便调试
-            console.log(`Tracked ${eventName} event:`, eventParams);
-        }
-        
-        // 为所有联系按钮添加点击事件监听
-        document.addEventListener('DOMContentLoaded', function() {
-            // 导航栏联系按钮
-            const contactButtonNav = document.getElementById('contactButtonNav');
-            if (contactButtonNav) {
-                contactButtonNav.addEventListener('click', function() {
-                    trackContactEvent('Lead', { button_location: 'navigation' });
-                }, false);
-            }
-            
-            // 移动端联系按钮
-            const contactButtonMobile = document.getElementById('contactButtonMobile');
-            if (contactButtonMobile) {
-                contactButtonMobile.addEventListener('click', function() {
-                    trackContactEvent('Lead', { button_location: 'mobile_menu' });
-                }, false);
-            }
-            
-            // 英雄区联系按钮
-            const contactButtonHero = document.getElementById('contactButtonHero');
-            if (contactButtonHero) {
-                contactButtonHero.addEventListener('click', function() {
-                    trackContactEvent('Lead', { button_location: 'hero_section' });
-                }, false);
-            }
-            
-            // 监管区联系按钮
-            const contactButtonReg = document.getElementById('contactButtonReg');
-            if (contactButtonReg) {
-                contactButtonReg.addEventListener('click', function() {
-                    trackContactEvent('Lead', { button_location: 'regulations_section', interest: 'regulatory_details' });
-                }, false);
-            }
-            
-            // 交易投资联系按钮
-            const contactButtonTrade = document.getElementById('contactButtonTrade');
-            if (contactButtonTrade) {
-                contactButtonTrade.addEventListener('click', function() {
-                    trackContactEvent('Lead', { button_location: 'opportunities_section', interest: 'trading_investment' });
-                }, false);
-            }
-            
-            // 融资联系按钮
-            const contactButtonFund = document.getElementById('contactButtonFund');
-            if (contactButtonFund) {
-                contactButtonFund.addEventListener('click', function() {
-                    trackContactEvent('Lead', { button_location: 'opportunities_section', interest: 'startup_funding' });
-                }, false);
-            }
-            
-            // 挖矿联系按钮
-            const contactButtonMine = document.getElementById('contactButtonMine');
-            if (contactButtonMine) {
-                contactButtonMine.addEventListener('click', function() {
-                    trackContactEvent('Lead', { button_location: 'opportunities_section', interest: 'mining_operations' });
-                }, false);
-            }
-            
-            // 开发联系按钮
-            const contactButtonDev = document.getElementById('contactButtonDev');
-            if (contactButtonDev) {
-                contactButtonDev.addEventListener('click', function() {
-                    trackContactEvent('Lead', { button_location: 'opportunities_section', interest: 'web3_development' });
-                }, false);
-            }
-            
-            // 主联系按钮
-            const contactButtonMain = document.getElementById('contactButtonMain');
-            if (contactButtonMain) {
-                contactButtonMain.addEventListener('click', function() {
-                    trackContactEvent('Lead', { button_location: 'contact_section' });
-                }, false);
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
             }
         });
     </script>
